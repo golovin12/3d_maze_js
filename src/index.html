@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze</title>
+</head>
+<script>
+    var is_dialog_close = true
+    var size = 7
+    var thickness = 0.1
+    var level_value = 1
+</script>
+
+<div class="loader"></div>
+<body>
+    <canvas class="webgl"></canvas>
+</body>
+
+<dialog class="modal" open>
+    <h2 class="mb-20" style="background: rgb(220,220,220);">Добро пожаловать в лабиринт!</h2>
+    <p>Управление:</p>
+    <ul style="padding-left: 20px">
+        <li>"W" - вверх</li>
+        <li>"S" - вниз</li>
+        <li>"A" - влево</li>
+        <li>"D" - вправо</li>
+    </ul>
+    <form method="dialog">
+        <button class="button1 bg-yellow">Понятно</button>
+    </form>
+</dialog>
+
+<dialog class="modal" id="dialog">
+    <h2 class="mb-20" style="background: rgb(220,220,220);">Поздравляем, вы прошли лабиринт!</h2>
+    <form method="dialog">
+        <button class="button1 mb-20 bg-yellow">Повторить</button>
+        <button class="button1 bg-green" onclick="size += 2; level_value += 1; document.getElementById('level_value').textContent = level_value">Следующий уровень</button>
+    </form>
+</dialog>
+
+<p class="levelInfo"><b>Уровень: <span id="level_value">1</span></b></p>
+</html>

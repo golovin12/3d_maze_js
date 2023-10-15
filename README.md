@@ -1,5 +1,7 @@
 # 3D- графика: Лабиринт.
-ThreeJS and CannonJS
+ИСпользуемые библиотеки: ThreeJS and CannonJS
+
+Учебный проект, в котором нужно было реализовать 3D игру с CannonJS
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
